@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Профиль</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.7.7/dist/axios.min.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/profile.js"></script>
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <div class="card__header">
+        <h1 class="card__title">Профиль</h1>
+        <button class="button button--ghost" id="logout-button" type="button">Выйти</button>
+      </div>
+
+      <p class="status" id="loading">Загрузка...</p>
+
+      <div id="error" class="status" hidden>
+        <p class="alert">Не удалось загрузить профиль.</p>
+        <button class="button" id="retry-button" type="button">Повторить</button>
+      </div>
+
+      <div class="profile" id="profile" hidden>
+        <img class="profile__avatar" id="avatar" width="112" height="112" alt="">
+        <h2 class="profile__name" id="full-name"></h2>
+        <p class="profile__username" id="username"></p>
+
+        <dl class="profile__info">
+          <div class="profile__row">
+            <dt>Email</dt>
+            <dd><a id="email"></a></dd>
+          </div>
+          <div class="profile__row">
+            <dt>Возраст</dt>
+            <dd id="age"></dd>
+          </div>
+          <div class="profile__row">
+            <dt>Город</dt>
+            <dd id="city"></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
