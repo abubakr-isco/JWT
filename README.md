@@ -12,6 +12,7 @@
 ## Структура
 
 ```
+index.html      — корень сайта, перенаправляет на login.html
 login.html      — страница входа
 profile.html    — защищённая страница профиля
 css/style.css   — стили
